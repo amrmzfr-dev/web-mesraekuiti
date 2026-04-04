@@ -1,0 +1,42 @@
+{
+  "entries": {
+    "next promotional website ozone machine static export setup|tf=5|te=12": {
+      "created_epoch": 1775291111,
+      "files": [
+        "CLAUDE.md"
+      ],
+      "mtimes_ns": {
+        "CLAUDE.md": 1775289148464416400
+      },
+      "result": {
+        "ok": true,
+        "query": "Next.js 15 promotional website ozone machine static export setup",
+        "graph_files": [
+          {
+            "id": "CLAUDE.md",
+            "kind": "file",
+            "path": "CLAUDE.md",
+            "ext": ".md",
+            "size": 4057,
+            "keywords": [],
+            "summary": "\ufeff<!-- dgc-policy-v11 -->.",
+            "file_hash": "d040b374"
+          }
+        ],
+        "graph_edges": [
+          {
+            "from": "CLAUDE.md",
+            "to": "dual-graph/context-store.js",
+            "rel": "references"
+          }
+        ],
+        "grep_hits": [],
+        "reuse_candidates": [],
+        "read_budget": {
+          "remaining_chars": 60000,
+          "reuse_gate_candidates": []
+        }
+      }
+    }
+  }
+}
