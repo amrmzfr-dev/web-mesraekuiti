@@ -52,10 +52,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-body font-medium transition-colors border-b-2 pb-0.5 ${
+                  className={`text-sm font-body font-medium transition-all px-3 py-1.5 rounded-lg ${
                     active
-                      ? "text-teal font-semibold border-teal"
-                      : "text-muted-text hover:text-teal border-transparent"
+                      ? "text-teal font-semibold bg-teal-light"
+                      : "text-muted-text hover:text-teal hover:bg-teal-light/50"
                   }`}
                 >
                   {link.label}
