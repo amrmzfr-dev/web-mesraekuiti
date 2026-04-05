@@ -47,7 +47,7 @@ export default function Navbar() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6">
             {NAV_LINKS.map((link) => {
-              const active = pathname === link.href;
+              const active = pathname.replace(/\/$/, "") === link.href;
               return (
                 <Link
                   key={link.href}
@@ -86,7 +86,7 @@ export default function Navbar() {
         <div className="md:hidden bg-white/97 backdrop-blur-md border-b border-gray-100 px-4 py-4">
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => {
-              const active = pathname === link.href;
+              const active = pathname.replace(/\/$/, "") === link.href;
               return (
                 <Link
                   key={link.href}
