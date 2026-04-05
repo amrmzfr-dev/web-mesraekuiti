@@ -37,8 +37,8 @@ const VALUES = [
 
 const MILESTONES = [
   { year: "2019", label: "Company Founded", desc: "Mesra Ekuiti Sdn Bhd established in Shah Alam, Selangor with a focus on environmental health solutions." },
-  { year: "2021", label: "OzoneCare Launched", desc: "Introduced our first commercial ozone sanitization unit for automotive interiors." },
-  { year: "2022", label: "First Workshop Network", desc: "Partnered with 20+ independent workshops across Klang Valley to offer OzoneCare as an add-on service." },
+  { year: "2021", label: "Ozone Treatment Launched", desc: "Introduced our first commercial ozone sanitization unit for automotive interiors." },
+  { year: "2022", label: "First Workshop Network", desc: "Partnered with 20+ independent workshops across Klang Valley to offer Ozone Treatment as an add-on service." },
   { year: "2024", label: "National Expansion", desc: "Extended operations to Peninsular and East Malaysia, serving both individual and fleet clients." },
 ];
 
@@ -51,7 +51,7 @@ const TEAM = [
   {
     name: "Nama Sapa Nak Letak?",
     role: "Head of Operations",
-    bio: "Oversees day-to-day service delivery and workshop partnerships, ensuring every OzoneCare treatment meets the company's quality and safety standards.",
+    bio: "Oversees day-to-day service delivery and workshop partnerships, ensuring every Ozone Treatment treatment meets the company's quality and safety standards.",
   },
   {
     name: "Nama Sapa Nak Letak?",
@@ -61,7 +61,7 @@ const TEAM = [
   {
     name: "Nama Sapa Nak Letak?",
     role: "Business Development",
-    bio: "Builds relationships with fleet operators, automotive groups, and franchise partners across Malaysia to grow OzoneCare's service network.",
+    bio: "Builds relationships with fleet operators, automotive groups, and franchise partners across Malaysia to grow Ozone Treatment's service network.",
   },
 ];
 
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 <p>
                   Founded in 2019, we began by researching effective, chemical-free alternatives to conventional
                   car interior cleaning methods. After extensive testing, we developed{" "}
-                  <strong className="text-charcoal">OzoneCare</strong> — a structured ozone treatment system
+                  <strong className="text-charcoal">Ozone Treatment</strong> — a structured ozone treatment system
                   purpose-built for Malaysian vehicle types and climate conditions.
                 </p>
                 <p>
@@ -168,7 +168,7 @@ export default function AboutPage() {
         <SectionWrapper className="bg-white">
           <div className="text-center mb-12">
             <p className="font-display font-semibold text-xs text-teal uppercase tracking-widest mb-3">
-              The People Behind OzoneCare
+              The People Behind Ozone Treatment
             </p>
             <h2 className="font-display font-bold text-charcoal text-2xl sm:text-3xl">
               Meet Our Team
@@ -228,7 +228,7 @@ export default function AboutPage() {
 
         <CtaBanner
           eyebrow="Work With Us"
-          heading="Interested in Partnering with OzoneCare?"
+          heading="Interested in Partnering with Ozone Treatment?"
           body="Whether you run a workshop, manage a fleet, or simply want to learn more about what we do — we'd love to hear from you."
           primaryCta={{ label: "Get in Touch", href: "/contact" }}
           secondaryCta={{ label: "For Operators", href: "/operators" }}

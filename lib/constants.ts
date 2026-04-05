@@ -10,7 +10,7 @@ import type {
 } from "./types";
 
 // ─── Site Metadata ────────────────────────────────────────────────────────────
-export const SITE_NAME = "OzoneCare";
+export const SITE_NAME = "Ozone Treatment";
 export const SITE_TAGLINE = "Chemical-free. Eco-friendly. Made for Malaysia.";
 export const SITE_DESCRIPTION =
   "Professional ozone sanitization for car interiors. Chemical-free, residue-free, and effective against bacteria, mold, and odor.";
