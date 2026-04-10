@@ -21,7 +21,7 @@ export default function Home() {
         <TheProblem />
         <WhatIsOzone />
         <MachineIllustration />
-        <HowItWorks fromColor="#f8f9fa" toColor="#f8f9fa" bg="bg-surface" />
+        <HowItWorks fromColor="#ffffff" toColor="#f8f9fa" bg="bg-white" />
         <Treatments fromColor="#f8f9fa" toColor="#ffffff" bg="bg-surface" />
         <WhyOzone fromColor="#ffffff" toColor="#f8f9fa" bg="bg-white" />
         <WhoIsItFor fromColor="#f8f9fa" toColor="#0f6e56" bg="bg-surface" />

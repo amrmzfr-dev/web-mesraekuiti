@@ -44,10 +44,6 @@ function MechanismStep({
       viewport={{ once: true, margin: "-50px" }}
       className="relative"
     >
-      {/* Connector line (not last) */}
-      {index < MECHANISM_STEPS.length - 1 && (
-        <div className="hidden lg:block absolute top-7 left-[calc(100%-0px)] w-full h-px bg-teal/15 z-0" />
-      )}
       <div className="relative z-10 flex flex-col items-start lg:items-center text-left lg:text-center gap-4">
         <div className="flex items-center gap-3 lg:flex-col lg:gap-2">
           <div className="w-14 h-14 rounded-full bg-teal/10 border-2 border-teal/30 flex flex-col items-center justify-center flex-shrink-0">
