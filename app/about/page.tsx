@@ -3,7 +3,6 @@ import Footer from "@/components/shared/Footer";
 import PageHero from "@/components/shared/PageHero";
 import WaveDivider from "@/components/shared/WaveDivider";
 import SectionWrapper from "@/components/shared/SectionWrapper";
-import CtaBanner from "@/components/shared/CtaBanner";
 import { SITE_NAME, COMPANY_NAME } from "@/lib/constants";
 import type { Metadata } from "next";
 
@@ -14,54 +13,57 @@ export const metadata: Metadata = {
 
 const VALUES = [
   {
-    title: "Health First",
+    title: "Quality Excellence",
     description:
-      "We believe every Malaysian deserves a clean, safe environment inside their vehicle. Our treatments are designed with occupant health as the primary concern.",
+      "We are committed to delivering the highest standard in every product and service.",
   },
   {
-    title: "Science-Backed",
+    title: "Customer First",
     description:
-      "Every process we use is grounded in established ozone chemistry. No gimmicks — just effective, well-understood technology applied with precision.",
+      "Our customers are at the heart of everything we do. We prioritize satisfaction, trust, and long-term relationships.",
   },
   {
-    title: "Eco-Responsibility",
+    title: "Innovation & Technology",
     description:
-      "Ozone reverts naturally to oxygen after treatment. No chemical waste, no residue, no harm to the environment. Clean for your car, clean for the planet.",
+      "We embrace modern technology and advanced solutions (such as ozone treatment, and smart detailing methods) to deliver superior results.",
   },
   {
-    title: "Partnership Mindset",
+    title: "Sustainability Commitment",
     description:
-      "We work closely with workshop operators and fleet managers to integrate ozone sanitization seamlessly into their existing service workflows.",
+      "We aim to reduce environmental impact through responsible practices.",
   },
 ];
 
 const MILESTONES = [
-  { year: "2019", label: "Company Founded", desc: "Mesra Ekuiti Sdn Bhd established in Shah Alam, Selangor with a focus on environmental health solutions." },
-  { year: "2021", label: "Ozone Treatment Launched", desc: "Introduced our first commercial ozone sanitization unit for automotive interiors." },
-  { year: "2022", label: "First Workshop Network", desc: "Partnered with 20+ independent workshops across Klang Valley to offer Ozone Treatment as an add-on service." },
-  { year: "2024", label: "National Expansion", desc: "Extended operations to Peninsular and East Malaysia, serving both individual and fleet clients." },
-];
-
-const TEAM = [
   {
-    name: "Nama Sapa Nak Letak?",
-    role: "Founder & Chief Executive",
-    bio: "Driven by a passion for clean technology and environmental health, our founder started Mesra Ekuiti with the goal of making professional-grade air sanitization accessible to every Malaysian car owner.",
+    year: "1998",
+    label: "Company Founded",
+    desc: "Established in Shah Alam, Mesra Ekuiti Sdn. Bhd. began its journey in the automotive parts trading industry.",
   },
   {
-    name: "Nama Sapa Nak Letak?",
-    role: "Head of Operations",
-    bio: "Oversees day-to-day service delivery and workshop partnerships, ensuring every Ozone Treatment treatment meets the company's quality and safety standards.",
+    year: "2016",
+    label: "SIRIM Certified",
+    desc: "Achieved key milestones by securing SIRIM and other relevant certifications.",
   },
   {
-    name: "Nama Sapa Nak Letak?",
-    role: "Technical Lead",
-    bio: "Manages the technical development of our ozone systems and leads ongoing research into treatment efficacy and safety protocols.",
+    year: "2016",
+    label: "Pilot Implementation",
+    desc: "Successfully carried out a pilot implementation with one of Malaysia's largest local automotive dealer networks.",
   },
   {
-    name: "Nama Sapa Nak Letak?",
-    role: "Business Development",
-    bio: "Builds relationships with fleet operators, automotive groups, and franchise partners across Malaysia to grow Ozone Treatment's service network.",
+    year: "2017",
+    label: "First Major Expansion",
+    desc: "Marked first major expansion with presence in over 20 service outlets.",
+  },
+  {
+    year: "2023",
+    label: "Nationwide Footprint",
+    desc: "Expanded footprint nationwide through selected major automotive brands, surpassing 50 service outlets across Malaysia.",
+  },
+  {
+    year: "2024",
+    label: "130+ Outlets",
+    desc: "Further accelerated growth, reaching more than 130 outlets nationwide.",
   },
 ];
 
@@ -77,7 +79,7 @@ export default function AboutPage() {
           theme="dark"
         />
 
-        {/* Company overview + building photo */}
+        {/* Company profile */}
         <WaveDivider from="#1a1a2e" to="#ffffff" />
         <SectionWrapper className="bg-white">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -100,46 +102,42 @@ export default function AboutPage() {
 
             <div className="space-y-6">
               <p className="font-display font-semibold text-xs text-teal uppercase tracking-widest">
-                Who We Are
+                Company Profile
               </p>
               <h2 className="font-display font-bold text-charcoal text-2xl sm:text-3xl leading-snug">
                 {COMPANY_NAME}
               </h2>
               <div className="space-y-4 text-muted-text font-body text-sm leading-relaxed">
                 <p>
-                  Mesra Ekuiti Sdn Bhd is a Malaysian-owned company based in Shah Alam, Selangor, dedicated to
-                  improving indoor air quality through ozone-based sanitization technology. We operate under the
-                  belief that clean air should not be a luxury — it should be the standard.
+                  Mesra Ekuiti Sdn. Bhd. was established in 1998 and is located in Shah Alam, Malaysia. The company was officially incorporated on 20 October 1998 with the registration number 0470525D / 199801014396.
                 </p>
                 <p>
-                  Founded in 2019, we began by researching effective, chemical-free alternatives to conventional
-                  car interior cleaning methods. After extensive testing, we developed{" "}
-                  <strong className="text-charcoal">Ozone Treatment</strong> — a structured ozone treatment system
-                  purpose-built for Malaysian vehicle types and climate conditions.
+                  The core business activities of Mesra Ekuiti Sdn. Bhd is in automotive field, focusing on autoparts trading. Over the years, the company has built a strong presence in the automotive industry and is recognized as a first-tier vendor for Perodua, reflecting its credibility, reliability, and commitment to quality standards.
                 </p>
                 <p>
-                  Today, we serve individual car owners, corporate fleets, and independent automotive workshops
-                  across Malaysia. Our goal remains simple: to make the air inside every car as clean as the air
-                  outside.
+                  In 2016, Mesra Ekuiti expanded its business into ozone treatment solutions, marking a strategic move into automotive sanitization services. Since then, the company has achieved notable success by supplying ozone treatment solutions to Perodua branches and authorized Perodua dealers nationwide.
+                </p>
+                <p>
+                  This milestone underscores Mesra Ekuiti's strong industry trust, proven product effectiveness, and continuous commitment to delivering high-quality automotive care solutions.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-6 pt-2">
-                {[
-                  { value: "5+",    label: "Years in Operation" },
-                  { value: "20+",   label: "Workshop Partners"  },
-                  { value: "1000+", label: "Vehicles Treated"   },
-                ].map(({ value, label }) => (
-                  <div key={label}>
-                    <p className="font-display font-bold text-teal text-2xl">{value}</p>
-                    <p className="font-body text-xs text-muted-text mt-0.5">{label}</p>
-                  </div>
-                ))}
+
+              {/* Contact & Address */}
+              <div className="pt-2 space-y-2 text-sm font-body text-muted-text">
+                <div className="flex items-start gap-2">
+                  <span className="font-semibold text-charcoal min-w-[70px]">Contact</span>
+                  <span>03 5524 7844</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="font-semibold text-charcoal min-w-[70px]">Address</span>
+                  <span>Lot 2, Jalan Gergaji 15/14, Seksyen 15, 40200 Shah Alam, Selangor Darul Ehsan</span>
+                </div>
               </div>
             </div>
           </div>
         </SectionWrapper>
 
-        {/* Values */}
+        {/* Core Values */}
         <WaveDivider from="#ffffff" to="#f8f9fa" />
         <SectionWrapper className="bg-surface">
           <div className="text-center mb-12">
@@ -163,56 +161,22 @@ export default function AboutPage() {
           </div>
         </SectionWrapper>
 
-        {/* Team */}
-        <WaveDivider from="#f8f9fa" to="#ffffff" />
-        <SectionWrapper className="bg-white">
-          <div className="text-center mb-12">
-            <p className="font-display font-semibold text-xs text-teal uppercase tracking-widest mb-3">
-              The People Behind Ozone Treatment
-            </p>
-            <h2 className="font-display font-bold text-charcoal text-2xl sm:text-3xl">
-              Meet Our Team
-            </h2>
-            <p className="font-body text-sm text-muted-text mt-3 max-w-xl mx-auto">
-              A small, focused team committed to bringing clean-air technology to every car in Malaysia.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TEAM.map(({ name, role, bio }, i) => (
-              <div key={i} className="flex flex-col items-center text-center space-y-4">
-                {/* Avatar placeholder — replace with <Image> */}
-                <div className="w-24 h-24 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-300 flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="8" r="4"/>
-                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-display font-semibold text-charcoal text-sm">{name}</p>
-                  <p className="font-body text-xs text-teal font-medium mt-0.5">{role}</p>
-                </div>
-                <p className="font-body text-xs text-muted-text leading-relaxed">{bio}</p>
-              </div>
-            ))}
-          </div>
-        </SectionWrapper>
-
         {/* Timeline */}
-        <WaveDivider from="#ffffff" to="#1a1a2e" />
+        <WaveDivider from="#f8f9fa" to="#1a1a2e" />
         <SectionWrapper className="bg-charcoal">
           <div className="text-center mb-12">
             <p className="font-display font-semibold text-xs text-teal uppercase tracking-widest mb-3">
               Our Journey
             </p>
             <h2 className="font-display font-bold text-white text-2xl sm:text-3xl">
-              From Idea to National Presence
+              Milestones &amp; Growth
             </h2>
           </div>
           <div className="relative max-w-2xl mx-auto">
             <div className="absolute left-[28px] top-0 bottom-0 w-px bg-white/10" />
             <div className="space-y-10">
-              {MILESTONES.map(({ year, label, desc }) => (
-                <div key={year} className="flex gap-6 items-start">
+              {MILESTONES.map(({ year, label, desc }, i) => (
+                <div key={i} className="flex gap-6 items-start">
                   <div className="flex-shrink-0 w-14 h-14 rounded-full bg-teal/10 border border-teal/30 flex items-center justify-center z-10">
                     <span className="font-display font-bold text-teal text-xs">{year}</span>
                   </div>
@@ -226,15 +190,7 @@ export default function AboutPage() {
           </div>
         </SectionWrapper>
 
-        <CtaBanner
-          eyebrow="Work With Us"
-          heading="Interested in Partnering with Ozone Treatment?"
-          body="Whether you run a workshop, manage a fleet, or simply want to learn more about what we do — we'd love to hear from you."
-          primaryCta={{ label: "Get in Touch", href: "/contact" }}
-          secondaryCta={{ label: "For Operators", href: "/operators" }}
-          fromColor="#1a1a2e"
-          toColor="#ffffff"
-        />
+        <WaveDivider from="#1a1a2e" to="#ffffff" />
       </main>
       <Footer />
     </>

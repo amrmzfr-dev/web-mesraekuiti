@@ -54,23 +54,23 @@ export const THE_PROBLEM = {
       value: 700,
       suffix: "+",
       label: "Bacterial Species",
-      sub: "found in average car interiors worldwide",
+      sub: "Hundreds of bacteria and fungi live in your car, often invisible to the naked eye",
     },
     {
       value: 80,
       suffix: "%",
       label: "of Car Owners",
-      sub: "never disinfect beyond surface wiping",
+      sub: "Steering wheels, seats, air vents, and surfaces can all harbour microbes from daily use and the environment",
     },
     {
       value: 500,
       suffix: "+",
       label: "Contaminants",
-      sub: "detected in untreated vehicle cabin air",
+      sub: "Regular cleaning and ozone treatments help reduce these microbes, keeping your car healthier and fresher",
     },
   ] as StatItem[],
   facts: [
-    "Your steering wheel can harbour more bacteria per cm² than a public toilet seat",
+    "Your steering wheel can harbour more bacteria due to frequent hand contact and the accumulation of dirt, sweat, and oils over time.",
     "Mold spores begin colonising damp fabric and vents within 24–48 hours after rain",
     "Air conditioning systems recirculate trapped bacteria and allergens every cycle",
     "Sweat, food residue, and pet dander accumulate in fibres no spray can fully reach",
@@ -88,7 +88,7 @@ export const WHAT_IS_OZONE_COLUMNS: WhatIsOzoneColumn[] = [
   {
     icon: "Atom",
     title: "What Is Ozone (O₃)?",
-    body: "Ozone is a naturally occurring molecule made of three oxygen atoms. Found in Earth's upper atmosphere, it has been used for decades in medical, food, and water industries for its powerful sanitization properties. It is not a synthetic chemical — it is a form of oxygen.",
+    body: "Ozone treatment utilizes pure O₃ gas as a sanitization method to neutralize odours and reduce harmful bacteria, fungi, and mold.",
   },
   {
     icon: "ShieldCheck",
@@ -98,7 +98,7 @@ export const WHAT_IS_OZONE_COLUMNS: WhatIsOzoneColumn[] = [
   {
     icon: "Leaf",
     title: "Why Is It Safe?",
-    body: "Ozone naturally reverts back to plain oxygen (O₂) after treatment — leaving absolutely zero chemical residue in your car. No synthetic compounds, no fragrances, no moisture. The car is ready to use as soon as the treatment completes.",
+    body: "Ozone naturally reverts back to plain oxygen (O₂) to atmosphere after treatment — leaving absolutely zero chemical residue in your car. No synthetic compounds, no fragrances, no moisture. The car is safely to use as the treatment completes.",
   },
 ];
 
@@ -112,13 +112,13 @@ export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
     number: "01",
     title: "Seal the Interior",
     description:
-      "Windows up, doors closed. The car interior is fully sealed to allow ozone to build up and reach effective sanitization concentration levels.",
+      "Ensure all windows and doors are closed to allow ozone to build up for effective sanitization.",
   },
   {
     number: "02",
     title: "Machine Activated",
     description:
-      "Our ozone machine is placed inside the car and switched on. It begins generating ozone gas that disperses evenly throughout the entire cabin.",
+      "The ozone machine is placed outside the vehicle and switched on. It begins generating ozone gas, which is then dispersed evenly throughout the entire cabin.",
   },
   {
     number: "03",
@@ -130,60 +130,58 @@ export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
     number: "04",
     title: "Back to Clean Oxygen",
     description:
-      "After treatment, ozone naturally converts back to O₂. The car is ready. No residue, no odor, no chemicals left behind.",
+      "After treatment, ozone naturally converts back to oxygen (O₂). The vehicle is ready for use with no residue, no odours, and no chemicals left behind.",
   },
 ];
 
 // ─── Treatments ───────────────────────────────────────────────────────────────
 export const TREATMENTS_HEADING = "Treatment Tiers";
 export const TREATMENTS_SUBHEADING =
-  "Three levels of treatment intensity to match your needs — from everyday maintenance to full antimicrobial protection.";
+  "Three treatment intensity levels are available to suit your needs, from everyday maintenance to full antimicrobial protection tailored to cabin size and vehicle condition";
 
 export const TREATMENTS: TreatmentTier[] = [
   {
     id: "basic",
     name: "Basic",
     duration: "5 minutes",
-    tagline: "Everyday Freshness",
-    description:
-      "Perfect for routine maintenance and daily use. Eliminates mild odors and refreshes air quality — ideal for a quick refresh between deeper sessions.",
+    tagline: "Essential Refresh",
+    description: "For everyday cleanliness",
     features: [
-      "Light odor neutralization",
-      "Air quality refresh",
-      "Surface-level bacteria reduction",
-      "Suitable for regular maintenance",
+      "Eliminates bacteria & fungi",
+      "Removes unpleasant odours",
+      "Sterilizes cabin & air intake system",
+      "Ideal for compact vehicles",
     ],
+    badge: "Quick • Effective • Affordable",
   },
   {
     id: "standard",
     name: "Standard",
     duration: "10 minutes",
-    tagline: "Deep Sanitization",
-    description:
-      "Comprehensive treatment for allergen reduction and deeper sanitization. Recommended after long trips, wet weather, or seasonal maintenance.",
+    tagline: "Deep Clean Protection",
+    description: "For noticeable odour & hygiene issues",
     features: [
-      "Everything in Basic",
-      "Allergen reduction",
-      "Bacteria and virus elimination",
-      "Fabric fiber penetration",
-      "Air vent deep clean",
+      "Eliminates strong odours (milk, smoke, spills)",
+      "Removes musty & trapped smells",
+      "Enhanced sterilization power",
+      "Suitable for sedans & moderately affected cabins",
     ],
+    badge: "Stronger • Deeper • Balanced Performance",
   },
   {
     id: "premium",
     name: "Premium",
     duration: "15 minutes",
-    tagline: "Full Antimicrobial Treatment",
-    description:
-      "The most thorough treatment available. Targets deep-seated mold, fungi, and contamination across all materials, gaps, and surfaces in your car.",
+    tagline: "Ultimate Air Purification",
+    description: "Maximum protection & restoration",
     features: [
-      "Everything in Standard",
-      "Mold and fungi elimination",
-      "Maximum ozone concentration",
-      "Deepest penetration into all gaps",
-      "Under-seat and boot coverage",
+      "Complete all-in-one cabin sanitization",
+      "Eliminates heavy, persistent odours",
+      "Deep air purification for healthier breathing",
+      "Advanced sterilization: bacteria, fungi & mold",
+      "Suitable for SUV, MPV & similar cabin sizes",
     ],
-    badge: undefined,
+    badge: "Most Powerful • Long-Lasting • Best Value",
     highlighted: true,
   },
 ];

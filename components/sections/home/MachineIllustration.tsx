@@ -371,11 +371,12 @@ export default function MachineIllustration() {
         </div>
 
         {/* Step annotations */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10 max-w-3xl mx-auto">
           {[
             { step: "01", label: "Ozone Generated",      desc: "Machine converts O₂ → O₃ at high concentration" },
-            { step: "02", label: "Flows Into Cabin",     desc: "Tube delivers ozone through the car's entry point" },
-            { step: "03", label: "Bacteria Eliminated",  desc: "O₃ oxidises pathogens, reverts safely to clean O₂" },
+            { step: "02", label: "Flows Into Cabin",     desc: "The gas disperses into fabrics, seats, carpets, vents and all surfaces" },
+            { step: "03", label: "Bacteria Eliminated",  desc: "Eliminate bad odor factors and ensure that the air quality in the vehicle is sanitized and clean" },
+            { step: "04", label: "Back to Oxygen",       desc: "Ozone naturally disperses back into the atmosphere and decomposes into oxygen (O₂) over time." },
           ].map(({ step, label, desc }) => (
             <div key={step} className="flex flex-col items-center text-center gap-2">
               <span className="font-display font-bold text-teal text-xs uppercase tracking-widest">{step}</span>
