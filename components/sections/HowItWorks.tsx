@@ -39,7 +39,7 @@ export default function HowItWorks({
         {/* Desktop */}
         <div className="hidden md:block">
           <div className="relative grid grid-cols-4 gap-4">
-            <div className="absolute top-[28px] left-[calc(12.5%+22px)] right-[calc(12.5%+22px)] h-px bg-teal/12" />
+            <div className="absolute top-[28px] left-[calc(12.5%+28px)] right-[calc(12.5%+28px)] h-px bg-teal/12" />
             {HOW_IT_WORKS_STEPS.map((step, i) => (
               <motion.div
                 key={step.number}

@@ -21,7 +21,6 @@ export const CONTACT_FORMSPREE = "https://formspree.io/f/placeholder";
 export const NAV_LINKS = [
   { label: "Technology", href: "/technology" },
   { label: "Treatments", href: "/treatments" },
-  { label: "For Operators", href: "/operators" },
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -152,7 +151,6 @@ export const TREATMENTS: TreatmentTier[] = [
       "Sterilizes cabin & air intake system",
       "Ideal for compact vehicles",
     ],
-    badge: "Quick • Effective • Affordable",
   },
   {
     id: "standard",
@@ -166,7 +164,6 @@ export const TREATMENTS: TreatmentTier[] = [
       "Enhanced sterilization power",
       "Suitable for sedans & moderately affected cabins",
     ],
-    badge: "Stronger • Deeper • Balanced Performance",
   },
   {
     id: "premium",
@@ -181,7 +178,6 @@ export const TREATMENTS: TreatmentTier[] = [
       "Advanced sterilization: bacteria, fungi & mold",
       "Suitable for SUV, MPV & similar cabin sizes",
     ],
-    badge: "Most Powerful • Long-Lasting • Best Value",
     highlighted: true,
   },
 ];
