@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import PageHero from "@/components/shared/PageHero";
@@ -83,21 +84,25 @@ export default function AboutPage() {
         <WaveDivider from="#1a1a2e" to="#ffffff" />
         <SectionWrapper className="bg-white">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Building photo placeholder — replace div with <Image> when ready */}
-            <div className="w-full aspect-[4/3] rounded-2xl bg-gray-100 border border-gray-200 flex flex-col items-center justify-center gap-3 text-gray-400">
-              <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <path d="M3 9h18"/>
-                <path d="M9 21V9"/>
-                <rect x="12" y="12" width="3" height="3"/>
-                <rect x="12" y="16" width="3" height="2"/>
-                <rect x="5" y="12" width="2" height="2"/>
-                <rect x="5" y="16" width="2" height="2"/>
-              </svg>
-              <p className="text-sm font-body text-center px-6">
-                Company building photo<br />
-                <span className="text-xs text-gray-300">Replace with actual image</span>
-              </p>
+            <div className="flex flex-col gap-3">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/company.image.2.jpg"
+                  alt="Mesra Ekuiti Sdn. Bhd. warehouse facility"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/company.image.1.jpg"
+                  alt="Mesra Ekuiti Sdn. Bhd. company signboard"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
 
             <div className="space-y-6">
