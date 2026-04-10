@@ -84,23 +84,26 @@ export default function AboutPage() {
         <WaveDivider from="#1a1a2e" to="#ffffff" />
         <SectionWrapper className="bg-white">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col gap-3">
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
-                <Image
-                  src="/company.image.2.jpg"
-                  alt="Mesra Ekuiti Sdn. Bhd. warehouse facility"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+            {/* Staggered photo layout */}
+            <div className="relative h-[480px]">
+              {/* Signboard — top-left, larger */}
+              <div className="absolute top-0 left-0 w-[80%] h-[72%] rounded-2xl overflow-hidden shadow-lg">
                 <Image
                   src="/company.image.1.jpg"
                   alt="Mesra Ekuiti Sdn. Bhd. company signboard"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 80vw, 40vw"
+                />
+              </div>
+              {/* Warehouse — bottom-right, overlaps */}
+              <div className="absolute bottom-0 right-0 w-[62%] h-[62%] rounded-2xl overflow-hidden shadow-2xl ring-[3px] ring-white">
+                <Image
+                  src="/company.image.2.jpg"
+                  alt="Mesra Ekuiti Sdn. Bhd. warehouse facility"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 60vw, 30vw"
                 />
               </div>
             </div>

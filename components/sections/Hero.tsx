@@ -2,137 +2,138 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { HERO } from "@/lib/constants";
 import { staggerContainerSlow, fadeUp, scaleIn } from "@/lib/animations";
 import WaveDivider from "@/components/shared/WaveDivider";
 
 // ── Molecule visual ───────────────────────────────────────────────────────────
-function OzoneMolecule() {
-  return (
-    <div className="relative w-full h-full flex items-center justify-center select-none">
-      {/* Glow */}
-      <div className="absolute w-72 h-72 rounded-full bg-teal/6 blur-3xl" />
-
-      {/* Orbital rings */}
-      <motion.div
-        className="absolute w-[380px] h-[380px] rounded-full border border-dashed border-teal/12"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-      />
-      <motion.div
-        className="absolute w-[280px] h-[280px] rounded-full border border-dashed border-aqua/15"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-      />
-      <motion.div
-        className="absolute w-[180px] h-[180px] rounded-full border border-teal/20"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-      />
-
-      {/* Orbit container A (outer) */}
-      <motion.div
-        className="absolute w-[280px] h-[280px]"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-      >
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-            className="w-9 h-9 rounded-full bg-aqua/10 border-2 border-aqua/40 flex items-center justify-center shadow-sm"
-          >
-            <span className="font-display font-bold text-aqua text-sm">O</span>
-          </motion.div>
-        </div>
-      </motion.div>
-
-      {/* Orbit container B (outer, 120° offset) */}
-      <motion.div
-        className="absolute w-[280px] h-[280px]"
-        animate={{ rotate: [120, 480] }}
-        transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-      >
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <motion.div
-            animate={{ rotate: [-120, -480] }}
-            transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-            className="w-9 h-9 rounded-full bg-teal/10 border-2 border-teal/40 flex items-center justify-center shadow-sm"
-          >
-            <span className="font-display font-bold text-teal text-sm">O</span>
-          </motion.div>
-        </div>
-      </motion.div>
-
-      {/* Orbit container C (inner) */}
-      <motion.div
-        className="absolute w-[180px] h-[180px]"
-        animate={{ rotate: [240, -120] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      >
-        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-          <motion.div
-            animate={{ rotate: [-240, 120] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            className="w-8 h-8 rounded-full bg-aqua/10 border-2 border-aqua/30 flex items-center justify-center"
-          >
-            <span className="font-display font-bold text-aqua/80 text-xs">O</span>
-          </motion.div>
-        </div>
-      </motion.div>
-
-      {/* Central atom */}
-      <motion.div
-        className="relative z-10 w-20 h-20 rounded-full bg-teal/10 border-2 border-teal/35 flex flex-col items-center justify-center shadow-lg"
-        animate={{ scale: [1, 1.06, 1] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const }}
-      >
-        <span className="font-display font-extrabold text-teal text-2xl leading-none">O₃</span>
-        <span className="font-body text-teal/60 text-[9px] tracking-widest mt-0.5">OZONE</span>
-      </motion.div>
-
-      {/* Floating stat badges */}
-      {HERO.badges.map((badge, i) => {
-        const positions = [
-          "top-[8%] right-[6%]",
-          "bottom-[12%] right-[4%]",
-          "bottom-[18%] left-[2%]",
-          "top-[14%] left-[6%]",
-        ];
-        return (
-          <motion.div
-            key={badge.label}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: [0, i % 2 === 0 ? -8 : 8, 0],
-            }}
-            transition={{
-              opacity: { delay: 0.8 + i * 0.2, duration: 0.5 },
-              scale: { delay: 0.8 + i * 0.2, duration: 0.5 },
-              y: {
-                delay: 1.2 + i * 0.2,
-                duration: 3 + i * 0.5,
-                repeat: Infinity,
-                ease: "easeInOut" as const,
-              },
-            }}
-            className={`absolute ${positions[i]} backdrop-blur-sm bg-white/80 border border-teal/15 rounded-xl px-3 py-2 shadow-md shadow-teal/5`}
-          >
-            <p className="font-display font-extrabold text-teal text-base leading-none">
-              {badge.value}
-            </p>
-            <p className="font-body text-muted-text text-[10px] mt-0.5 whitespace-nowrap">
-              {badge.label}
-            </p>
-          </motion.div>
-        );
-      })}
-    </div>
-  );
-}
+// function OzoneMolecule() {
+//   return (
+//     <div className="relative w-full h-full flex items-center justify-center select-none">
+//       {/* Glow */}
+//       <div className="absolute w-72 h-72 rounded-full bg-teal/6 blur-3xl" />
+//
+//       {/* Orbital rings */}
+//       <motion.div
+//         className="absolute w-[380px] h-[380px] rounded-full border border-dashed border-teal/12"
+//         animate={{ rotate: 360 }}
+//         transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+//       />
+//       <motion.div
+//         className="absolute w-[280px] h-[280px] rounded-full border border-dashed border-aqua/15"
+//         animate={{ rotate: -360 }}
+//         transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+//       />
+//       <motion.div
+//         className="absolute w-[180px] h-[180px] rounded-full border border-teal/20"
+//         animate={{ rotate: 360 }}
+//         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+//       />
+//
+//       {/* Orbit container A (outer) */}
+//       <motion.div
+//         className="absolute w-[280px] h-[280px]"
+//         animate={{ rotate: 360 }}
+//         transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+//       >
+//         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+//           <motion.div
+//             animate={{ rotate: -360 }}
+//             transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+//             className="w-9 h-9 rounded-full bg-aqua/10 border-2 border-aqua/40 flex items-center justify-center shadow-sm"
+//           >
+//             <span className="font-display font-bold text-aqua text-sm">O</span>
+//           </motion.div>
+//         </div>
+//       </motion.div>
+//
+//       {/* Orbit container B (outer, 120° offset) */}
+//       <motion.div
+//         className="absolute w-[280px] h-[280px]"
+//         animate={{ rotate: [120, 480] }}
+//         transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+//       >
+//         <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+//           <motion.div
+//             animate={{ rotate: [-120, -480] }}
+//             transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+//             className="w-9 h-9 rounded-full bg-teal/10 border-2 border-teal/40 flex items-center justify-center shadow-sm"
+//           >
+//             <span className="font-display font-bold text-teal text-sm">O</span>
+//           </motion.div>
+//         </div>
+//       </motion.div>
+//
+//       {/* Orbit container C (inner) */}
+//       <motion.div
+//         className="absolute w-[180px] h-[180px]"
+//         animate={{ rotate: [240, -120] }}
+//         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+//       >
+//         <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+//           <motion.div
+//             animate={{ rotate: [-240, 120] }}
+//             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+//             className="w-8 h-8 rounded-full bg-aqua/10 border-2 border-aqua/30 flex items-center justify-center"
+//           >
+//             <span className="font-display font-bold text-aqua/80 text-xs">O</span>
+//           </motion.div>
+//         </div>
+//       </motion.div>
+//
+//       {/* Central atom */}
+//       <motion.div
+//         className="relative z-10 w-20 h-20 rounded-full bg-teal/10 border-2 border-teal/35 flex flex-col items-center justify-center shadow-lg"
+//         animate={{ scale: [1, 1.06, 1] }}
+//         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+//       >
+//         <span className="font-display font-extrabold text-teal text-2xl leading-none">O₃</span>
+//         <span className="font-body text-teal/60 text-[9px] tracking-widest mt-0.5">OZONE</span>
+//       </motion.div>
+//
+//       {/* Floating stat badges */}
+//       {HERO.badges.map((badge, i) => {
+//         const positions = [
+//           "top-[8%] right-[6%]",
+//           "bottom-[12%] right-[4%]",
+//           "bottom-[18%] left-[2%]",
+//           "top-[14%] left-[6%]",
+//         ];
+//         return (
+//           <motion.div
+//             key={badge.label}
+//             initial={{ opacity: 0, scale: 0.8 }}
+//             animate={{
+//               opacity: 1,
+//               scale: 1,
+//               y: [0, i % 2 === 0 ? -8 : 8, 0],
+//             }}
+//             transition={{
+//               opacity: { delay: 0.8 + i * 0.2, duration: 0.5 },
+//               scale: { delay: 0.8 + i * 0.2, duration: 0.5 },
+//               y: {
+//                 delay: 1.2 + i * 0.2,
+//                 duration: 3 + i * 0.5,
+//                 repeat: Infinity,
+//                 ease: "easeInOut",
+//               },
+//             }}
+//             className={`absolute ${positions[i]} backdrop-blur-sm bg-white/80 border border-teal/15 rounded-xl px-3 py-2 shadow-md shadow-teal/5`}
+//           >
+//             <p className="font-display font-extrabold text-teal text-base leading-none">
+//               {badge.value}
+//             </p>
+//             <p className="font-body text-muted-text text-[10px] mt-0.5 whitespace-nowrap">
+//               {badge.label}
+//             </p>
+//           </motion.div>
+//         );
+//       })}
+//     </div>
+//   );
+// }
 
 export default function Hero() {
   return (
@@ -147,8 +148,8 @@ export default function Hero() {
           O₃
         </div>
 
-        <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-4 items-center min-h-[calc(100vh-4rem)] py-16">
+        <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[calc(100vh-4rem)] py-16">
             {/* Copy */}
             <motion.div
               variants={staggerContainerSlow}
@@ -214,14 +215,24 @@ export default function Hero() {
               </motion.div>
             </motion.div>
 
-            {/* Molecule */}
+            {/* Hero image */}
             <motion.div
               variants={scaleIn}
               initial="hidden"
               animate="show"
-              className="h-[380px] lg:h-[520px] w-full lg:w-[520px] flex-shrink-0"
+              className="w-full flex-shrink-0"
             >
-              <OzoneMolecule />
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/common_factor.png"
+                  alt="Common factors causing bad air quality inside your car"
+                  width={1330}
+                  height={886}
+                  className="w-full h-auto"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 560px"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
