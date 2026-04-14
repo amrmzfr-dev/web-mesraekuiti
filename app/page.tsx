@@ -1,12 +1,10 @@
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
-import CtaBanner from "@/components/shared/CtaBanner";
 import Hero from "@/components/sections/Hero";
 import WhatIsOzone from "@/components/sections/WhatIsOzone";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Treatments from "@/components/sections/Treatments";
 import WhyOzone from "@/components/sections/WhyOzone";
-import WhoIsItFor from "@/components/sections/WhoIsItFor";
 import FAQ from "@/components/sections/FAQ";
 import TheProblem from "@/components/sections/home/TheProblem";
 import MachineIllustration from "@/components/sections/home/MachineIllustration";
@@ -23,17 +21,7 @@ export default function Home() {
         <MachineIllustration />
         <HowItWorks fromColor="#ffffff" toColor="#f8f9fa" bg="bg-white" />
         <Treatments fromColor="#f8f9fa" toColor="#ffffff" bg="bg-surface" />
-        <WhyOzone fromColor="#ffffff" toColor="#f8f9fa" bg="bg-white" />
-        <WhoIsItFor fromColor="#f8f9fa" toColor="#0f6e56" bg="bg-surface" />
-        <CtaBanner
-          eyebrow="The Cleanest Drive Starts Here"
-          heading="Ready to Breathe Better Inside Your Car?"
-          body="Choose a treatment tier, reach out via WhatsApp, or ask about bringing ozone sanitization to your workshop."
-          primaryCta={{ label: "Contact Us", href: "/contact" }}
-          secondaryCta={{ label: "Learn the Science", href: "/technology" }}
-          fromColor="#0f6e56"
-          toColor="#ffffff"
-        />
+        <WhyOzone fromColor="#ffffff" toColor="#ffffff" bg="bg-white" />
         <FAQ
           items={FAQ_ITEMS.slice(0, 6)}
           fromColor="#ffffff"
