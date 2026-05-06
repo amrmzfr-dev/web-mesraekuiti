@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ozone Treatment — Mesra Ekuiti Sdn Bhd
+
+Promotional website for **Mesra Ekuiti Sdn Bhd**, Malaysia's professional ozone car sanitization service. Built with Next.js 15 as a fully static export.
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router, static export)
+- **Language**: TypeScript (strict)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Components**: shadcn/ui + Base UI
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — Hero, The Problem, What Is Ozone, Machine Illustration, How It Works, Treatments, Why Ozone, FAQ |
+| `/about` | Company profile, core values, milestone timeline (1998–2024) |
+| `/treatments` | Treatment tiers (Basic / Standard / Premium), full comparison table, FAQ, CTA |
+| `/technology` | Ozone mechanism, method comparison table, safety & certifications, FAQ, CTA |
+| `/operators` | B2B page — operator benefits, stats strip, partner process, FAQ, contact form |
+| `/contact` | Office address, phone, business hours, embedded map |
+
+## Project Structure
+
+```
+app/                    # Next.js App Router pages
+components/
+  sections/             # Page-specific sections (Hero, FAQ, Treatments, …)
+  sections/home/        # Home-only sections (TheProblem, MachineIllustration)
+  shared/               # Reusable layout components (Navbar, Footer, PageHero, WaveDivider, CtaBanner, AnimatedCounter, SectionWrapper)
+  ui/                   # Base UI primitives (Button, Card, Accordion)
+lib/
+  constants.ts          # All copy, data arrays, and site config
+  types.ts              # Shared TypeScript types
+  animations.ts         # Framer Motion variants
+public/                 # Static assets (images)
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Outputs a fully static site to `/out` — no server required. Deploy to any static host (Netlify, Vercel static, S3, etc.).
